@@ -8,6 +8,7 @@
 <body>
 <?php 
 $ketqua = null;
+$str = null;
        if(isset( $_GET["tinh"] ) ){
         $str =$_GET["dayso"];
         $arr = explode(",",$str);

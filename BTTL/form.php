@@ -11,7 +11,7 @@
         if(isset($_POST["width"]) and isset($_POST["heigh"])){
             $width = $_POST["width"];
             $heigh = $_POST["heigh"];
-            if(is_numeric($_POST["width"]) and is_numeric($_POST["heigh"]) and $_POST["width"] > $_POST["heigh"] and $_POST["width"]>0 and $_POST["heigh"]>0){
+            if( is_numeric($_POST["width"]) and is_numeric($_POST["heigh"]) and $_POST["width"] > $_POST["heigh"] and $_POST["width"]>0 and $_POST["heigh"]>0){
                 $s =$width * $heigh;
             }
             else {
