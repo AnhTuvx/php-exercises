@@ -9,7 +9,6 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $n = $_POST["numElements"];
     $array = tao_mang($n);
-    $mang_kq = xuat_mang($array);
     $tong = tinh_tong($array);
     $min = tim_min($array);
     $max = tim_max($array);
