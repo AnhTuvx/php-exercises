@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Form Handling</title>
-    <style>
-        .bold-text {
-            color: #00008B;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
 <?php
 $text = "";
 $array = array();
-$kq = "";       
+$kq = "";
 
 if (isset($_POST['submit'])) {
     $text = $_POST['dayso'];
@@ -35,31 +21,37 @@ function tim_kiem($array, $giatri) {
     return 0;
 }
 function xuat_mang($array) {
-    foreach ($array as $value) {
-        echo $value .",";
-    }
+    return implode(" ", $array);
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập và Tìm kiếm trên dãy số</title>
+</head>
+<body>
 <form method="POST" action="">
-    <table align="center" bgcolor="#7fffd4">
+    <table align="center" style="background-color: lightseagreen">
         <tr>
-            <td colspan="3" align="center" class="bold-text"> <h1> Nhập và Tìm kiếm trên dãy số</h1> </td>
+            <td colspan="3" align="center" style="background-color: teal; color: white"> <h4>TÌM KIẾM</h4> </td>
         </tr>
         <tr>
-            <td class="bold-text">Nhập dãy số</td>
-            <td><input type="text" name="dayso" size="50" value="<?php echo $text; ?>"></td>
-            <td style="color: #ff0a07">*</td>
+            <td>Nhập mảng</td>
+            <td>
+                <input type="text" name="dayso" value="<?php echo $text; ?>">
+            </td>
         </tr>
         <tr>
-            <td class="bold-text">Nhập giá trị tìm kiếm</td>
-            <td><input type="text" name="giatri" size="50"></td>
+            <td>Nhập số cần tìm</td>
+            <td><input type="text" name="giatri" size="5" value="<?php echo $giatri; ?>"></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td>
-                <input type="submit" name="submit" value="Tìm kiếm">
+                <input type="submit" name="submit" value="Tìm kiếm" style="background-color: lightskyblue">
             </td>
         </tr>
           <tr>
@@ -69,7 +61,7 @@ function xuat_mang($array) {
         </tr>
         <tr>
             <td class="bold-text">Kết quả tìm kiếm</td>
-            <td><input type="text" name="ketqua" value="<?php echo $kq; ?>" readonly></td>
+            <td><input type="text" name="ketqua" value="<?php echo $kq; ?>" readonly style="background-color: lightcyan"></td>
             <td></td>
         </tr>
         <tr>
