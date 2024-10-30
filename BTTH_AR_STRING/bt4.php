@@ -2,10 +2,11 @@
 $text = "";
 $array = array();
 $kq = "";
+$giatri ="";
 
 if (isset($_POST['submit'])) {
     $text = $_POST['dayso'];
-    $mang = xuat_mang(array());
+    $mang = xuat_mang($array);
     $array = explode(",", $text);
     $giatri = $_POST['giatri'];
     $timkiem_result = tim_kiem($array, $giatri);
