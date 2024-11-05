@@ -46,7 +46,7 @@ if ($num_fields != 0) {
         if($i%2!=0)
             echo "<tr style='background-color: beige'>";
         else
-            echo "<tr>";
+        echo "<tr>";
         $stt = $i + 1;
         echo "<td>".$stt."</td>";
         echo "<td>".$ten[$i]."</td>";

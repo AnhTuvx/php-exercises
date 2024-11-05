@@ -69,12 +69,12 @@ if(isset($_POST["xem"])){
                         // 3. Thuc thi cau truy van
                         $result = mysqli_query($conn, $query);
                         // 4.Xu ly du lieu tra ve
-                        if(mysqli_num_rows($result)!=0){
-                            while ($row = mysqli_fetch_array($result)){
-                                $str = "<option value='".$row["MaLop"]."'>".$row["TenLop"]."</option>";
-                                echo $str;
+                      if(mysqli_num_rows($result)!= 0){
+                        while($row = mysqli_fetch_array($result)){
+                            $str = "<option value='".$row["MaLop"]."'>".$row["TenLop"]."</option>";
+                            echo $str;
                         }
-                    }
+                      }
                     ?>
                 </select>
             </td>
