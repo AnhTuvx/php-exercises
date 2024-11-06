@@ -19,7 +19,7 @@
 <body>
     <div class="container">
         <h1>Danh sách sinh viên</h1>
-        <a href="them.html" class="btn btn-success">Thêm Sinh Viên</a>
+        <a href="them.php" class="btn btn-success">Thêm Sinh Viên</a>
     <table class="table">
     <thead class="thead-dark">
       <tr>
