@@ -31,22 +31,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Kiểm tra các ràng buộc
     $errors = array();
 
+    // Ràng buộc họ và tên
     if (empty($hoten)) {
-        $errors['hoten'] = "Họ và tên không được để trống.";
-    } elseif (!preg_match("/^[\p{L}\s]+$/u", $hoten)) {
-        $errors['hoten'] = "Họ và tên không được chứa số hoặc ký tự đặc biệt.";
+        $errors['hoten'] = "Họ và Tên must not be blank.";
+    } elseif (preg_match("/\d/", $hoten)) {
+        $errors['hoten'] = "Numbers are not allowed in Họ và Tên.";
+    } elseif (preg_match("/[^\p{L}\s'-]/u", $hoten)) {
+        $errors['hoten'] = "Special characters are not allowed in Họ và Tên.";
     }
 
-    if (empty($masv)) {
-        $errors['masv'] = "MSSV không được để trống.";
-    } elseif (!preg_match("/^[a-zA-Z0-9\s]+$/", $masv)) {
-        $errors['masv'] = "MSSV không được chứa ký tự đặc biệt.";
-    }
+    // Ràng buộc MSSV
 
+    // Ràng buộc lớp
     if (empty($lop)) {
-        $errors['lop'] = "Lớp không được để trống.";
-    } elseif (!preg_match("/^[a-zA-Z0-9\s]+$/", $lop)) {
-        $errors['lop'] = "Lớp không được chứa ký tự đặc biệt.";
+        $errors['lop'] = "Lớp must not be blank.";
+    } elseif (preg_match("/[^a-zA-Z0-9\s]/", $lop)) {
+        $errors['lop'] = "Special characters are not allowed in Lớp.";
     }
 
     if (empty($errors)) {
@@ -55,9 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_query($conn, $sql)) {
             echo "<div class='alert alert-success'>Thêm sinh viên thành công!</div>";
             header("Location: lietke.php");
+            exit();
         } else {
             echo "<div class='alert alert-danger'>Lỗi: " . mysqli_error($conn) . "</div>";
             header("Location: lietke.php");
+            exit();
         }
 
         // Đóng kết nối

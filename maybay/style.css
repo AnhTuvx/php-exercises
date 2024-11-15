@@ -1,0 +1,99 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.booking-form {
+    background-color: rgba(246, 246, 246, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    position: absolute;
+    top: 25%; /* Di chuyển form xuống dưới để chỉ nằm nửa trên của hình ảnh */
+    left: 25%;
+}
+
+.booking-form h2 {
+    margin-bottom: 30px;
+}
+
+.input-group-text {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-control {
+    border-radius: 50px;
+}
+
+.background-img {
+    background-image: url('https://static.vinwonders.com/2022/11/pexels-apasaric-1285625.jpg');
+    background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+    background-position: center;
+    height: 100vh;
+}
+
+.form-check-label {
+    color: #007bff;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.image-container img {
+    width: 100%; /* Chiều ngang full màn hình */
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container {
+    margin-top: 30px;
+}
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.flight-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.flight-card:hover {
+    transform: translateY(-10px);
+}
+.flight-card h3 {
+    font-size: 1.5em;
+}
+.flight-card .date, .flight-card .price {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.view-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+.view-button:hover {
+    background-color: #0056b3;
+}
